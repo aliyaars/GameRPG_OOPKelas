@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zahwagn\\OneDrive - UNIVERSITAS INDONESIA\\GAME_OOP\\GameRPG_OOPKelas\\HerculesBattle\\HerculesBattle.csproj",
+      "projectUniqueName": "C:\\Users\\Zahwagn\\OneDrive - UNIVERSITAS INDONESIA\\GAME_COMMAND\\GameRPG_OOPKelas\\HerculesBattle\\HerculesBattle.csproj",
       "projectName": "HerculesBattle",
-      "projectPath": "C:\\Users\\Zahwagn\\OneDrive - UNIVERSITAS INDONESIA\\GAME_OOP\\GameRPG_OOPKelas\\HerculesBattle\\HerculesBattle.csproj",
+      "projectPath": "C:\\Users\\Zahwagn\\OneDrive - UNIVERSITAS INDONESIA\\GAME_COMMAND\\GameRPG_OOPKelas\\HerculesBattle\\HerculesBattle.csproj",
       "packagesPath": "C:\\Users\\Zahwagn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zahwagn\\OneDrive - UNIVERSITAS INDONESIA\\GAME_OOP\\GameRPG_OOPKelas\\HerculesBattle\\obj\\",
+      "outputPath": "C:\\Users\\Zahwagn\\OneDrive - UNIVERSITAS INDONESIA\\GAME_COMMAND\\GameRPG_OOPKelas\\HerculesBattle\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Zahwagn\\AppData\\Roaming\\NuGet\\NuGet.Config"

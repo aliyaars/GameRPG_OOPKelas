@@ -1,33 +1,35 @@
-// Inventory.cs
-public class Inventory
+namespace HerculesBattle.Models
 {
-    private List<Item> items;
-    private int maxCapacity;
-
-    public Inventory(int capacity)
+    public class Inventory
     {
-        items = new List<Item>();
-        maxCapacity = capacity;
-    }
+        private List<Item> items;
+        private int maxCapacity;
 
-    public bool AddItem(Item item)
-    {
-        if (items.Count >= maxCapacity)
-            return false;
+        public Inventory(int capacity)
+        {
+            items = new List<Item>();
+            maxCapacity = capacity;
+        }
 
-        items.Add(item);
-        return true;
-    }
+        public bool AddItem(Item item)
+        {
+            if (items.Count >= maxCapacity)
+                return false;
 
-    public bool RemoveItem(Item item)
-    {
-        return items.Remove(item);
-    }
+            items.Add(item);
+            return true;
+        }
 
-    public List<Item> GetItems() => items;
+        public bool RemoveItem(Item item)
+        {
+            return items.Remove(item);
+        }
 
-    public List<Item> GetItemsByType(ItemType type)
-    {
-        return items.Where(i => i.Type == type).ToList();
+        public List<Item> GetItems() => items;
+
+        public List<Item> GetItemsByType(ItemType type)
+        {
+            return items.Where(i => i.Type == type).ToList();
+        }
     }
 }

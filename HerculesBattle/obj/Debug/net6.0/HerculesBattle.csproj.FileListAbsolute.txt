@@ -1,0 +1,5 @@
+C:\Users\Zahwagn\OneDrive - UNIVERSITAS INDONESIA\GAME_OOP\GameRPG_OOPKelas\HerculesBattle\obj\Debug\net6.0\HerculesBattle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zahwagn\OneDrive - UNIVERSITAS INDONESIA\GAME_OOP\GameRPG_OOPKelas\HerculesBattle\obj\Debug\net6.0\HerculesBattle.AssemblyInfoInputs.cache
+C:\Users\Zahwagn\OneDrive - UNIVERSITAS INDONESIA\GAME_OOP\GameRPG_OOPKelas\HerculesBattle\obj\Debug\net6.0\HerculesBattle.AssemblyInfo.cs
+C:\Users\Zahwagn\OneDrive - UNIVERSITAS INDONESIA\GAME_OOP\GameRPG_OOPKelas\HerculesBattle\obj\Debug\net6.0\HerculesBattle.csproj.CoreCompileInputs.cache
+C:\Users\Zahwagn\OneDrive - UNIVERSITAS INDONESIA\GAME_OOP\GameRPG_OOPKelas\HerculesBattle\obj\Debug\net6.0\HerculesBattle.sourcelink.json

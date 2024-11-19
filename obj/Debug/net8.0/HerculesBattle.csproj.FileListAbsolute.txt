@@ -1,0 +1,14 @@
+C:\Users\Zahwagn\OneDrive\HerculesBattle\bin\Debug\net8.0\HerculesBattle.exe
+C:\Users\Zahwagn\OneDrive\HerculesBattle\bin\Debug\net8.0\HerculesBattle.deps.json
+C:\Users\Zahwagn\OneDrive\HerculesBattle\bin\Debug\net8.0\HerculesBattle.runtimeconfig.json
+C:\Users\Zahwagn\OneDrive\HerculesBattle\bin\Debug\net8.0\HerculesBattle.dll
+C:\Users\Zahwagn\OneDrive\HerculesBattle\bin\Debug\net8.0\HerculesBattle.pdb
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.AssemblyInfoInputs.cache
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.AssemblyInfo.cs
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.csproj.CoreCompileInputs.cache
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.dll
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\refint\HerculesBattle.dll
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.pdb
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.genruntimeconfig.cache
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\ref\HerculesBattle.dll

@@ -12,3 +12,4 @@ C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\refint\HerculesBattle.
 C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.pdb
 C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.genruntimeconfig.cache
 C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\ref\HerculesBattle.dll
+C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.sourcelink.json

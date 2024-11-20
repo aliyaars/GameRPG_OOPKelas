@@ -1,4 +1,5 @@
 using System;
+using HerculesBattle.Enums;
 
 namespace HerculesBattle.Models
 {
@@ -30,8 +31,8 @@ namespace HerculesBattle.Models
             Speed = 5;
             Experience = 0;
             ExperienceToNextLevel = 100;
+            EquippedWeapon = new Weapon(WeaponType.Hand); // defaultnya tanpa senjata
         }
-
         public void EquipWeapon(Weapon weapon)
         {
             EquippedWeapon = weapon;
@@ -52,7 +53,14 @@ namespace HerculesBattle.Models
         public void Heal(int amount)
         {
             Health = Math.Min(MaxHealth, Health + amount);
-            Console.WriteLine($"{Name} heals for {amount} HP!");
+            if (amount == MaxHealth)
+            {
+                Console.WriteLine($"{Name} heals to full health!");
+            }
+            else
+            {
+                Console.WriteLine($"{Name} heals for {amount} HP!");
+            }
         }
 
         public void UseEnergy(int amount)
@@ -90,7 +98,7 @@ namespace HerculesBattle.Models
             Health = MaxHealth;
             MaxEnergy += 10;
             Energy = MaxEnergy;
-            AttackPower += 5;
+            AttackPower += 10;
             Defense += 3;
             Speed += 2;
 

@@ -10,5 +10,6 @@ namespace HerculesBattle
             GameManager gameManager = new GameManager();
             gameManager.StartGame();
         }
+        
     }
 }

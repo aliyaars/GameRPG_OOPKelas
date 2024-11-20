@@ -6,7 +6,7 @@ namespace HerculesBattle.Models
     {
         public WeaponType Type { get; private set; }
         public int AttackBonus { get; private set; }
-        public string Description { get; private set; }
+        public string Description { get; private set; } = string.Empty;
         public int MinLevel { get; private set; }
 
         public Weapon(WeaponType type)
@@ -33,6 +33,11 @@ namespace HerculesBattle.Models
                     AttackBonus = 20;
                     Description = "Heavy weapon with highest attack power";
                     MinLevel = 9;
+                    break;
+                case WeaponType.Hand:
+                    AttackBonus = 0;
+                    Description = "Just bare hands";
+                    MinLevel = 0;
                     break;
             }
         }

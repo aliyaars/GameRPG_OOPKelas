@@ -5,6 +5,7 @@ namespace HerculesBattle.Enums
         Sword,
         Spear,
         Bow,
-        Axe
+        Axe,
+        Hand
     }
 }

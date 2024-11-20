@@ -19,7 +19,7 @@ namespace HerculesBattle.Models
             Level = level;
             MaxHealth = (50 + (level * 20)) * healthMultiplier;
             Health = MaxHealth;
-            AttackPower = 5 + (level * 3);
+            AttackPower = 10 + (level * 3);
             Defense = 2 + (level * 2);
             Speed = 3 + level;
             ExperienceValue = level * 50;

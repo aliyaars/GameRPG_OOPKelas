@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HerculesBattle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+976b81e6cd36409469e171be543d8555f5989ba1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c843f8a11dec38258600b50641e146e42c26baf3")]
 [assembly: System.Reflection.AssemblyProductAttribute("HerculesBattle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HerculesBattle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

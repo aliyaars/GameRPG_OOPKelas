@@ -6,6 +6,7 @@ namespace HerculesBattle.Enums
         Spear,
         Bow,
         Axe,
-        Hand
+        Hand,
+        ZeusThunderbolt
     }
 }

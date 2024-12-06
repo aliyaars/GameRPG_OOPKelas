@@ -16,7 +16,68 @@ namespace HerculesBattle.Managers
         private GameSettings? settings;
         private int currentLevel;
         private AchievementManager achievementManager;
+        private List<NPC> npcs;
 
+        private void InitializeNPCs()
+        {
+            npcs = new List<NPC>
+            {
+                new NPC(
+                    "Healer",
+                    "Village Doctor",
+                    new Dictionary<string, (string, Action<Character>)>
+                    {
+                        { "1", ("Heal me, please.", player => {
+                            Console.WriteLine("Healer: You are fully healed!");
+                            player.AdjustStats(player.MaxHealth, 0, 0);
+                        }) },
+                        { "2", ("Can you spare some wisdom?", player => {
+                            Console.WriteLine("Healer: Always respect your limits, young warrior.");
+                            player.AdjustStats(0, 10, 0);
+                        }) }
+                    }
+                ),
+                new NPC(
+                    "Blacksmith",
+                    "Weapon Specialist",
+                    new Dictionary<string, (string, Action<Character>)>
+                    {
+                        { "1", ("Can you forge a better weapon for me?", player => {
+                            Console.WriteLine("Blacksmith: Your weapon has been upgraded!");
+                            player.AdjustStats(0, 0, 10);
+                        }) },
+                        { "2", ("I don’t need anything.", player => {
+                            Console.WriteLine("Blacksmith: As you wish.");
+                        }) }
+                    }
+                )
+            };
+        }
+        public void InteractWithNPC()
+        {
+            if (npcs == null || npcs.Count == 0)
+            {
+                Console.WriteLine("No NPCs available to interact with.");
+                return;
+            }
+
+            Console.WriteLine("\nAvailable NPCs:");
+            for (int i = 0; i < npcs.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {npcs[i].Name} - {npcs[i].Role}");
+            }
+
+            Console.Write("\nChoose an NPC to interact with: ");
+            string choice = Console.ReadLine() ?? "0";
+            if (int.TryParse(choice, out int npcIndex) && npcIndex > 0 && npcIndex <= npcs.Count)
+            {
+                npcs[npcIndex - 1].StartDialogue(player);
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. Returning to the game.");
+            }
+        }
         public GameManager()
         {
             player = new Character("Hero");
@@ -124,32 +185,26 @@ namespace HerculesBattle.Managers
             settings = new GameSettings();
             currentLevel = 1;
             InitializeLevels();
+            InitializeNPCs();
         }
 
         private void InitializeLevels()
         {
             levels = new List<Level>
                 {
-                    // Level 1-4: Battle with Soldier at City of Tiryns (2 weapons available)
                     new Level(1, "Villager", "A Villager at City of Tiryns", EnemyType.Human),
                     new Level(2, "Veteran Soldier", "An experienced soldier", EnemyType.Human),
                     new Level(3, "Elite Guard", "One of the city's finest warriors", EnemyType.Human),
                     new Level(4, "Captain of the Guard", "Leader of the city guards", EnemyType.Human),
-                    
-                    // Level 5-8: King Eurystheus and The Elite Warriors of Eurystheus (3 weapons available)
                     new Level(5, "Royal Guard", "Eurystheus's personal guard", EnemyType.EliteWarrior),
                     new Level(6, "Royal Champion", "Champion of Eurystheus", EnemyType.EliteWarrior),
                     new Level(7, "Eurystheus's General", "Right hand of Eurystheus", EnemyType.EliteWarrior),
                     new Level(8, "King Eurystheus", "The King", EnemyType.Boss),
-                    
-                    // Level 9-10: Help Zeus to defeat The Giants of Olympus (all 4 weapons available)
                     new Level(9, "Lesser Giant", "A formidable giant", EnemyType.Giant),
                     new Level(10, "Giant King", "Leader of the giants", EnemyType.Giant)
                 };
         }
 
-
-        // Game Start
         public void StartGame()
         {
             InitializeGame();
@@ -224,14 +279,16 @@ namespace HerculesBattle.Managers
 
         private void PrepareForBattle()
         {
-            Console.WriteLine("\nPreparing for battle...");
-            Console.WriteLine("1. View Status");
-            Console.WriteLine("2. View Items");
-            Console.WriteLine("3. Start The Battle");
-
             bool ready = false;
+
             while (!ready)
             {
+                Console.WriteLine("\nPreparing for battle...");
+                Console.WriteLine("1. View Status");
+                Console.WriteLine("2. View Items");
+                Console.WriteLine("3. Interact with NPC");
+                Console.WriteLine("4. Start The Battle");
+
                 Console.Write("\nYour choice: ");
                 string? choice = Console.ReadLine();
 
@@ -244,11 +301,19 @@ namespace HerculesBattle.Managers
                         ViewItems();
                         break;
                     case "3":
+                        InteractWithNPC();
+                        break;
+                    case "4":
                         ready = true;
                         break;
                     default:
-                        Console.WriteLine("Invalid choice. Selec from (1-3)");
+                        Console.WriteLine("Invalid choice. Please select from (1-4).");
                         break;
+                }
+
+                if (!ready)
+                {
+                    Console.WriteLine("\nReturning to Preparing for Battle menu...");
                 }
             }
         }

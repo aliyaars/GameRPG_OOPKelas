@@ -8,9 +8,9 @@ namespace HerculesBattle.Models
         public WeaponType Type { get; private set; }
         public int AttackBonus { get; private set; }
         public string Description { get; private set; } = string.Empty;
-        public int MinLevel { get; private set; }
+        public int MinLevel { get; private set; } = 0;
 
-        public Weapon(WeaponType type, AchievementManager achievementManager = null)
+        public Weapon(WeaponType type, AchievementManager? achievementManager = null)
         {
             Type = type;
             switch (type)

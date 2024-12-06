@@ -40,7 +40,7 @@ namespace HerculesBattle.Models
             EquippedWeapon = weapon;
             AttackPower = 10 + weapon.AttackBonus;
 
-            if (UsedWeapons.Add(weapon.Type)) // Returns false if the weapon type was already used
+            if (UsedWeapons.Add(weapon.Type)) 
             {
                 Console.WriteLine($"\n{Name} used a new weapon: {weapon.Type}!");
             }
@@ -117,5 +117,16 @@ namespace HerculesBattle.Models
             Console.WriteLine($"Defense: {Defense}");
             Console.WriteLine($"Speed: {Speed}\n");
         }
+
+        public void AdjustStats(int healthChange, int energyChange, int attackPowerChange)
+        {
+            Health = Math.Clamp(Health + healthChange, 0, MaxHealth);
+            Energy = Math.Clamp(Energy + energyChange, 0, MaxEnergy);
+            AttackPower = Math.Max(AttackPower + attackPowerChange, 0);
+
+            Console.WriteLine($"{Name}'s stats have been updated:");
+            Console.WriteLine($"Health: {Health}/{MaxHealth}, Energy: {Energy}/{MaxEnergy}, Attack: {AttackPower}");
+        }
+
     }
 }

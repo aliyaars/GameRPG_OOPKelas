@@ -15,6 +15,7 @@ namespace HerculesBattle.Managers
         private List<Level>? levels;
         private GameSettings? settings;
         private int currentLevel;
+        private AchievementManager achievementManager;
 
         public GameManager()
         {
@@ -22,6 +23,7 @@ namespace HerculesBattle.Managers
             levels = new List<Level>();
             settings = new GameSettings();
             currentLevel = 0;
+            achievementManager = new AchievementManager();
         }
 
         private static void ShowGameIntro()
@@ -55,20 +57,22 @@ namespace HerculesBattle.Managers
         {
             var weapons = new List<Weapon>();
 
-            // Basic weapons (from level 1 - 10)
             weapons.Add(new Weapon(WeaponType.Sword));
             weapons.Add(new Weapon(WeaponType.Spear));
 
-            // Bow available from levels 5-8
             if (currentLevel >= 5)
             {
                 weapons.Add(new Weapon(WeaponType.Bow));
             }
 
-            // Axe available from level 9-10
             if (currentLevel >= 9)
             {
                 weapons.Add(new Weapon(WeaponType.Axe));
+            }
+
+            if (achievementManager != null && achievementManager.IsAchievementUnlocked("Collector"))
+            {
+                weapons.Add(new Weapon(WeaponType.ZeusThunderbolt, achievementManager));
             }
 
             return weapons;
@@ -95,6 +99,10 @@ namespace HerculesBattle.Managers
                 if (int.TryParse(input, out choice) && choice >= 1 && choice <= availableWeapons.Count)
                 {
                     validInput = true;
+                    if (player.UsedWeapons.Count == (Enum.GetValues(typeof(WeaponType)).Length - 1))
+                    {
+                        achievementManager.UnlockAchievement("Master of Arms");
+                    }
                 }
                 else
                 {
@@ -154,8 +162,7 @@ namespace HerculesBattle.Managers
                 return;
             }
 
-
-            currentLevel = 1; // CurrentLevel initialized
+            currentLevel = 1; 
 
             while (currentLevel <= levels.Count && player.IsAlive())
             {
@@ -163,7 +170,6 @@ namespace HerculesBattle.Managers
                 Console.WriteLine($"\n=== Level {currentLevel}: {level.Name} ===");
                 Console.WriteLine(level.Description);
 
-                // Select weapon before battle
                 Weapon weapon = ChooseWeapon();
                 player.EquipWeapon(weapon);
 
@@ -173,21 +179,28 @@ namespace HerculesBattle.Managers
                 PrepareForBattle();
                 battle.Start();
 
+                if (currentLevel == 1 && !enemy.IsAlive())
+                {
+                    achievementManager.UnlockAchievement("First Blood");
+                }
+
                 if (player.IsAlive())
                 {
                     currentLevel++;
-                    if (currentLevel <= levels.Count)
+
+                    if (player.Health == 1)
                     {
-                        bool continuePlaying = ShowLevelCompleteMenu();
-                        if (!continuePlaying)
-                        {
-                            ShowGameOverMessage();
-                            break;
-                        }
+                        achievementManager.UnlockAchievement("Last Second Hero");
                     }
-                    else
+
+                    if (currentLevel == 5)
                     {
-                        ShowVictoryMessage();
+                        achievementManager.UnlockAchievement("Warrior");
+                    }
+
+                    if (currentLevel > levels.Count)
+                    {
+                        achievementManager.UnlockAchievement("Immortal");
                     }
                 }
                 else
@@ -196,6 +209,8 @@ namespace HerculesBattle.Managers
                     break;
                 }
             }
+
+            achievementManager.IsAllAchievementsUnlocked();
         }
 
         private Enemy CreateEnemy(Level level)

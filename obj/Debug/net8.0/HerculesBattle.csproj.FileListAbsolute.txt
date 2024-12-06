@@ -13,3 +13,18 @@ C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.pdb
 C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.genruntimeconfig.cache
 C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\ref\HerculesBattle.dll
 C:\Users\Zahwagn\OneDrive\HerculesBattle\obj\Debug\net8.0\HerculesBattle.sourcelink.json
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\bin\Debug\net8.0\HerculesBattle.exe
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\bin\Debug\net8.0\HerculesBattle.deps.json
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\bin\Debug\net8.0\HerculesBattle.runtimeconfig.json
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\bin\Debug\net8.0\HerculesBattle.dll
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\bin\Debug\net8.0\HerculesBattle.pdb
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.AssemblyInfoInputs.cache
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.AssemblyInfo.cs
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.csproj.CoreCompileInputs.cache
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.sourcelink.json
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.dll
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\refint\HerculesBattle.dll
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.pdb
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\HerculesBattle.genruntimeconfig.cache
+D:\Documents\Kuliah\Smt 3\OOP\Kelas\Kelompok N\GameRPG_OOPKelas\obj\Debug\net8.0\ref\HerculesBattle.dll

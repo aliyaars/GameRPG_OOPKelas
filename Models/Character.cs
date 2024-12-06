@@ -17,6 +17,7 @@ namespace HerculesBattle.Models
         public int Experience { get; private set; }
         public int ExperienceToNextLevel { get; private set; }
         public Weapon EquippedWeapon { get; private set; }
+        public HashSet<WeaponType> UsedWeapons { get; private set; }
 
         public Character(string name)
         {
@@ -31,12 +32,19 @@ namespace HerculesBattle.Models
             Speed = 5;
             Experience = 0;
             ExperienceToNextLevel = 100;
-            EquippedWeapon = new Weapon(WeaponType.Hand); // defaultnya tanpa senjata
+            EquippedWeapon = new Weapon(WeaponType.Hand);
+            UsedWeapons = new HashSet<WeaponType>();
         }
         public void EquipWeapon(Weapon weapon)
         {
             EquippedWeapon = weapon;
             AttackPower = 10 + weapon.AttackBonus;
+
+            if (UsedWeapons.Add(weapon.Type)) // Returns false if the weapon type was already used
+            {
+                Console.WriteLine($"\n{Name} used a new weapon: {weapon.Type}!");
+            }
+
             Console.WriteLine($"\n{Name} equipped {weapon.Type} (Attack Bonus: +{weapon.AttackBonus})");
             Console.WriteLine($"New Attack Power: {AttackPower}");
         }

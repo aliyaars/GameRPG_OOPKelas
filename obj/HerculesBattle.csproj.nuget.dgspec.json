@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zahwagn\\OneDrive\\HerculesBattle\\HerculesBattle.csproj": {}
+    "D:\\Documents\\Kuliah\\Smt 3\\OOP\\Kelas\\Kelompok N\\GameRPG_OOPKelas\\HerculesBattle.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zahwagn\\OneDrive\\HerculesBattle\\HerculesBattle.csproj": {
+    "D:\\Documents\\Kuliah\\Smt 3\\OOP\\Kelas\\Kelompok N\\GameRPG_OOPKelas\\HerculesBattle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zahwagn\\OneDrive\\HerculesBattle\\HerculesBattle.csproj",
+        "projectUniqueName": "D:\\Documents\\Kuliah\\Smt 3\\OOP\\Kelas\\Kelompok N\\GameRPG_OOPKelas\\HerculesBattle.csproj",
         "projectName": "HerculesBattle",
-        "projectPath": "C:\\Users\\Zahwagn\\OneDrive\\HerculesBattle\\HerculesBattle.csproj",
-        "packagesPath": "C:\\Users\\Zahwagn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zahwagn\\OneDrive\\HerculesBattle\\obj\\",
+        "projectPath": "D:\\Documents\\Kuliah\\Smt 3\\OOP\\Kelas\\Kelompok N\\GameRPG_OOPKelas\\HerculesBattle.csproj",
+        "packagesPath": "C:\\Users\\Falah Andhesryo\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\Kuliah\\Smt 3\\OOP\\Kelas\\Kelompok N\\GameRPG_OOPKelas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Zahwagn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Falah Andhesryo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

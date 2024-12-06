@@ -1,4 +1,5 @@
 using HerculesBattle.Enums;
+using HerculesBattle.Managers;
 
 namespace HerculesBattle.Models
 {
@@ -9,7 +10,7 @@ namespace HerculesBattle.Models
         public string Description { get; private set; } = string.Empty;
         public int MinLevel { get; private set; }
 
-        public Weapon(WeaponType type)
+        public Weapon(WeaponType type, AchievementManager achievementManager = null)
         {
             Type = type;
             switch (type)
@@ -37,6 +38,15 @@ namespace HerculesBattle.Models
                 case WeaponType.Hand:
                     AttackBonus = 0;
                     Description = "Just bare hands";
+                    MinLevel = 0;
+                    break;
+                case WeaponType.ZeusThunderbolt:
+                    if (achievementManager == null || !achievementManager.IsAchievementUnlocked("Collector"))
+                    {
+                        throw new InvalidOperationException("Zeus Thunderbolt is locked. Unlock the 'Collector' achievement first.");
+                    }
+                    AttackBonus = 999;
+                    Description = "The weapon of the gods";
                     MinLevel = 0;
                     break;
             }
